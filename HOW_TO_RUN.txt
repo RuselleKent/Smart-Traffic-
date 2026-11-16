@@ -1,0 +1,21 @@
+SMART TRAFFIC - standalone app (no server needed)
+
+Everything is built into the app: the 4 cameras and their videos, live traffic
+numbers, alerts, analytics and reports. It works offline. Internet is only used
+to draw the street map tiles.
+
+Sign in:  free@gmail.com   /   freeaccount
+
+1) In your project folder (flutter_application_1), paste this folder's contents
+   over it: lib, assets, tool, test, pubspec.yaml. Keep your android/ ios/ web/.
+2) In a terminal inside the project:
+      flutter pub get
+      flutter run -d chrome          (quick preview on PC)
+3) Build the APK for your phone:
+      dart run tool/patch_android.dart
+      flutter build apk --release
+   File: build\app\outputs\flutter-apk\app-release.apk
+   Copy it to your phone and install it.
+
+What persists on the phone: sign-in, settings, password change, camera names,
+alerts and their status, saved snapshots.
